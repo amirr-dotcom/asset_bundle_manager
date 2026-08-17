@@ -51,12 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
     final version = await _bundleService.getInstalledVersion(bundleId);
     final images = await _bundleService.getAllImages(bundleId);
     setState(() {
-      _installedVersion = version ?? 0;
+      _installedVersion = version;
       _imagePaths = images;
-      if (_installedVersion > 0) {
+      if (_installedVersion != -1) {
         _status = 'Installed v$_installedVersion';
       } else {
         _status = 'Not installed';
+        _installedVersion = 0;
       }
     });
   }

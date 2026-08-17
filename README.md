@@ -63,6 +63,15 @@ List<String> audio = await service.getAllAudio('hero_bundle');
 // Get all video files (mp4, mov, mkv, webm)
 List<String> videos = await service.getAllVideo('hero_bundle');
 
+// Get a unified summary of all content
+BundleContent content = await service.getBundleContent('hero_bundle');
+if (content.hasImages) {
+  print('Found ${content.images.length} images');
+}
+
+// Read a JSON file from the bundle
+Map<String, dynamic> data = await service.getJsonFile('hero_bundle', 'config.json');
+
 // Get the absolute path to a specific file
 String filePath = await service.getFilePath('hero_bundle', 'data/config.json');
 

@@ -1,6 +1,6 @@
 name: asset_bundle_manage
 description: "A Flutter package to efficiently manage, download, and version remote image sequences and asset bundles from ZIP sources."
-version: 0.1.0
+version: 0.2.0
 repository: https://github.com/amirr-dotcom/asset_bundle_manager
 issue_tracker: https://github.com/amirr-dotcom/asset_bundle_manager/issues
 
